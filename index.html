@@ -17,10 +17,10 @@
 <div style="height:70px"></div>
 <div class="content content-txt container">
   
-  <h1><i class="fas fa-fire-extinguisher"></i> JFSP Convective Outflow Evaluation Project</h1>
+  <h1><b>JFSP Convective Outflow Project</b></h1>
   
 
-  <h2>Project Overview</h2><hr>
+  <h2><i class="fas fa-fire"></i> Project Overview</h2><hr>
   <p>Text here describing project. We are doing fire weather stuff.</p>
   <p>Text here describing project. We are doing fire weather stuff.</p>
   <p>Text here describing project. We are doing fire weather stuff.</p>
@@ -30,27 +30,26 @@
   <div class='container'>
   <h2>Domains</h2><hr>
 
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-header">
+
+    <div class="card-deck">
+        <div class="card" style="width:400px">
+            <div class="card-header">
                 Contiguous United States
-                </div>
-                <div class="card-body">
+            </div>
+            <div class="card-body">
                 <p><a href="./pdf/2018_Blaylock_AMS_Poster.pdf"><i class="fas fa-file-pdf"></i> Poster: AMS 2018 - Brian</a>
                 <p><a href="https://glff.mesowest.org/"><i class="fas fa-external-link-alt"></i> Great Lakes Fire and Fuels</a></p>  
-                </div>
+                <p><a href="http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/hrrr_fires.html"><i class="fas fa-fire-extinguisher"></i> Current HRRR point forecast at fires >1000 acres</a></p>  
             </div>
         </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-header">
+
+        <div class="card" style="width:400px">
+            <div class="card-header">
                 Alaska
-                </div>
-                <div class="card-body">
+            </div>
+            <div class="card-body">
                 <p><a href="./pdf/2018_McCorkle_AMS_Poster.pdf"><i class="fas fa-file-pdf"></i> Poster: AMS 2018 - Taylor</a>
                 <p><a href="https://akff.mesowest.org/"><i class="fas fa-external-link-alt"></i> Alaska Fire and Fuels</a></p>    
-                </div>
             </div>
         </div>
     </div>
@@ -114,11 +113,14 @@
                in Boise, ID on 14-15 May 2018.
             <br>
             <br>
-            <p>more info</p>
-            <p>more info</p>
+            <p>Current Fires, Lower 48 States</p>
+            <img src="http://home.chpc.utah.edu/~u0553130/oper/HRRR_fires/firemap.png">
             <p>more info</p>
             <p>more info</p>
             <img src="./images/mesowest20_lg.jpg">
+            <br>
+            <p>Current Fires, Red Flag Potential</p>
+            <img src='#' id='RFP'>
 
             <br>
 
@@ -129,5 +131,18 @@
     </div>
 
 </div>
+
+<script>
+        function pad(n){return n<10 ? '0'+n : n};
+        
+        var currentTime = new Date();
+        var hour = currentTime.getHours();
+        var month = currentTime.getMonth();
+        var day = currentTime.getDate();
+        var year = currentTime.getFullYear();
+        var URL = 'http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/cgi-bin/plot_hrrr_custom.cgi?model=hrrr&valid='+year+'-'+pad(month)+'-'+pad(day)+'_'+pad(hour)+'00&fxx=0&location=&plotcode=RedFlagPot_Fill&dsize=conus&background=arcgis';
+        document.getElementById('RFP').src = URL
+</script>
+
 </body>
 </html>
