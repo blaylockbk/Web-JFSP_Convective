@@ -1,0 +1,21 @@
+.DS_Store
+Thumbs.db
+
+get_token.py
+*.png
+*.jpg
+*.mov
+*.pyc
+*.out
+*.nc
+*.nc4
+*.grib2
+*.h5
+*.npy
+
+# Make an exception
+!mesowest20_lg.jpg
+
+# Don't send anything in the directory
+# rclone-beta/
+
