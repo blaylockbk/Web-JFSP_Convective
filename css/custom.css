@@ -1,0 +1,82 @@
+/* . are for class, # or for id*/
+
+h1 {text-align: center;
+    padding-top:25px;}
+
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size:20px;
+}
+
+body {
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parallax {
+    /* The image used */
+    background-color: rgba(0, 0, 0, 0.75);;
+    background-image: url("../images/BrianHead_2017-06_Ethan.png");
+
+    /* Set a specific height */
+    min-height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-size: auto 100%;
+}
+
+.parallax-txt {
+    text-align:center;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("../images/brianheadcityview.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-size: auto 100%;
+}
+
+
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 50%;
+}
+
+.content {
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.content-white {
+    position: relative;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    padding: 20px;
+}
+
