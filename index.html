@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>JFSP Convective Outflow Project</title>
+        <title>Assessment of HRRR Model Forecasts of Convective Outflows in the Fire Environment</title>
         <script src='./js/siteopen.js'></script>
 </head>
 
@@ -17,14 +17,20 @@
 <div style="height:70px"></div>
 <div class="content content-txt container">
   
-  <h1><b>JFSP Convective Outflow Project</b></h1>
+  <h3><b>HRRR Model Forecasts of Convective Outflows in the Fire Environment</b></h3>
   
-
+<!--
   <h2><i class="fas fa-fire"></i> Project Overview</h2><hr>
-  <p>Text here describing project. We are doing fire weather stuff.</p>
-  <p>Text here describing project. We are doing fire weather stuff.</p>
-  <p>Text here describing project. We are doing fire weather stuff.</p>
-  <p>Text here describing project. We are doing fire weather stuff.</p>
+<-->
+<p>
+We are investigating the impacts of convective outflows on fire behavior. The ability of the High Resolution Rapid Refresh (HRRR) model to forecast the characteristics of such mesoscale atmospheric boundaries is being evaluated in the continental U.S. and Alaska. 
+<p>
+<i>Can the HRRR facilitate nowcasting at lead teams less than 6 h and improve situational awareness regarding convective outflows at lead times less than 24 h?
+</i>
+While it may not be possible to expect high forecast accuracy for the timing, speed, and intensity of individual convective outflows, there is potential to improve the utility of model output for convective outflow forecasting at lead times of less than 24 h, as well as how the risks associated with such events can be communicated operationally to the fire weather community.
+This collaborative project between the University of Utah and University of Alaska-Fairbanks also involves operational personnel to help design the study and evaluate the results.
+
+
     
   </div>
   <div class='container'>
@@ -37,9 +43,10 @@
                 Contiguous United States
             </div>
             <div class="card-body">
-                <p><a href="./pdf/2018_Blaylock_AMS_Poster.pdf"><i class="fas fa-file-pdf"></i> Poster: AMS 2018 - Brian</a>
-                <p><a href="https://glff.mesowest.org/"><i class="fas fa-external-link-alt"></i> Great Lakes Fire and Fuels</a></p>  
-                <p><a href="http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/hrrr_fires.html"><i class="fas fa-fire-extinguisher"></i> Current HRRR point forecast at fires >1000 acres</a></p>  
+                <p><a href="./pdf/2018_Blaylock_AMS_Poster.pdf"><i class="fas fa-file-pdf fa-fw"></i> Poster: AMS 2018 - Brian</a>
+                <p><a href="https://1drv.ms/p/s!AtJL0JL_rT9jsu0B0P8nj956hymOcg"><i class="fab fa-slideshare fa-fw"></i> Talk: AMS Boise - Brian</a>
+                <p><a href="https://glff.mesowest.org/"><i class="fas fa-external-link-alt fa-fw"></i> Great Lakes Fire and Fuels</a></p>  
+                <p><a href="http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/hrrr_fires.html"><i class="fas fa-fire-extinguisher fa-fw"></i> Current HRRR point forecast at fires >1000 acres</a></p>  
             </div>
         </div>
 
@@ -71,15 +78,15 @@
                     <img class="card-img-top" src="./images/HRRR_sample.png" alt="Card image cap">
                     <div class="card-body">
                     <h5 class="card-title">HRRR</h5>
-                    <p> Operational and experimental output from the High Resolution Rapid Refresh model data</p>
+                    <p> Operational and experimental output from the High Resolution Rapid Refresh model</p>
                     <a class="btn btn-primary btn-block" href="http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/cgi-bin/hrrr_download.cgi">Download Page</a>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="./images/GOES16_sample.png" alt="Card image cap">
                     <div class="card-body">
-                    <h5 class="card-title">GOES-16 Data</h5>
-                    <p> Multiband formated datasets at 2 km resolution every 5 minutes</p>
+                    <h5 class="card-title">GOES-16</h5>
+                    <p> Multiband formated datasets at 2 km resolution every 5 minutes for the continental United States</p>
                     <a class='btn btn-primary btn-block' href="http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/cgi-bin/goes16_pando.cgi">Download Page</a>
                     </div>
                 </div>
@@ -113,36 +120,17 @@
                in Boise, ID on 14-15 May 2018.
             <br>
             <br>
-            <p>Current Fires, Lower 48 States</p>
-            <img src="http://home.chpc.utah.edu/~u0553130/oper/HRRR_fires/firemap.png">
-            <p>more info</p>
-            <p>more info</p>
-            <img src="./images/mesowest20_lg.jpg">
+            <p style='text-align:center'><img src="http://home.chpc.utah.edu/~u0553130/oper/HRRR_fires/firemap.png" width='850px'>
             <br>
-            <p>Current Fires, Red Flag Potential</p>
-            <img src='#' id='RFP'>
-
             <br>
-
+            <p style='text-align:center'><img src="./images/mesowest20_lg.jpg">
+           
         </div>
-
 
         <script src='./js/siteclose.js'></script>
     </div>
 
 </div>
-
-<script>
-        function pad(n){return n<10 ? '0'+n : n};
-        
-        var currentTime = new Date();
-        var hour = currentTime.getHours();
-        var month = currentTime.getMonth();
-        var day = currentTime.getDate();
-        var year = currentTime.getFullYear();
-        var URL = 'http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/cgi-bin/plot_hrrr_custom.cgi?model=hrrr&valid='+year+'-'+pad(month)+'-'+pad(day)+'_'+pad(hour)+'00&fxx=0&location=&plotcode=RedFlagPot_Fill&dsize=conus&background=arcgis';
-        document.getElementById('RFP').src = URL
-</script>
 
 </body>
 </html>
